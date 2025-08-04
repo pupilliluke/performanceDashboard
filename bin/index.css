@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
@@ -16,6 +21,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+}
+
 .sidebar {
   width: 250px;
   background-color: #ffffff;
@@ -23,10 +34,24 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide default sidebar on mobile since we're using the collapsible one */
+  }
+}
+
 .main-content {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 80px; /* Account for hamburger button */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .page-header {

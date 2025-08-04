@@ -19,22 +19,20 @@ const App: React.FC = () => {
     <TodoProvider>
       <NotesProvider>
         <RemindersProvider>
-          <div className="app-container">
-            <Layout>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/day" element={<DayView />} />
-                <Route path="/week" element={<WeekView />} />
-                <Route path="/month" element={<MonthView />} />
-                <Route path="/year" element={<YearView />} />
-                <Route path="/brainstorm" element={<BrainstormView />} />
-                <Route path="/kanban" element={<KanbanView />} />
-                <Route path="/notes" element={<NotesView />} />
-                <Route path="/reminders" element={<RemindersView />} />
-              </Routes>
-            </Layout>
-          </div>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/day" element={<DayView />} />
+              <Route path="/week" element={<WeekView />} />
+              <Route path="/month" element={<MonthView />} />
+              <Route path="/year" element={<YearView />} />
+              <Route path="/brainstorm" element={<BrainstormView />} />
+              <Route path="/kanban" element={<KanbanView />} />
+              <Route path="/notes" element={<NotesView />} />
+              <Route path="/reminders" element={<RemindersView />} />
+            </Routes>
+          </Layout>
         </RemindersProvider>
       </NotesProvider>
     </TodoProvider>
